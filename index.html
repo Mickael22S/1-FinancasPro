@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7">
+<meta name="color-scheme" content="light dark">
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("fp_tema")||"auto")}catch(e){}</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="FinançasPro — controle de receitas, dívidas parceladas, gastos e calendário financeiro.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>FinançasPro — Controle Financeiro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="gnav">
+  <div class="gnav-in">
+    <div class="logo-mark" role="img" aria-label="FinançasPro">Finan<span>ças</span>Pro</div>
+    <nav class="topnav" aria-label="Navegação principal">
+      <div class="nav-item active" data-page="calendario" tabindex="0" role="button" onclick="showPage('calendario')" aria-label="Calendário"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2.5"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span class="tip">Calendário</span></div>
+      <div class="nav-item" data-page="receitas" tabindex="0" role="button" onclick="showPage('receitas')" aria-label="Receitas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span class="tip">Receitas</span></div>
+      <div class="nav-item" data-page="dividas" tabindex="0" role="button" onclick="showPage('dividas')" aria-label="Dívidas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span class="tip">Dívidas</span></div>
+      <div class="nav-item" data-page="gastos" tabindex="0" role="button" onclick="showPage('gastos')" aria-label="Gastos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg><span class="tip">Gastos</span></div>
+      <div class="nav-item" data-page="dashboard" tabindex="0" role="button" onclick="showPage('dashboard')" aria-label="Dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg><span class="tip">Dashboard</span></div>
+      <div class="nav-item" data-page="metas" tabindex="0" role="button" onclick="showPage('metas')" aria-label="Metas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span class="tip">Metas</span></div>
+    </nav>
+    <div class="gnav-right">
+      <button class="icon-btn" onclick="abrirConfig()" aria-label="Configurações" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet-overlay" id="cfg-overlay" onclick="fecharConfig()"></div>
+<div class="sheet" id="cfg-sheet" role="dialog" aria-modal="true" aria-labelledby="cfg-title">
+  <div class="sheet-head">
+    <div class="sheet-title" id="cfg-title">Configurações</div>
+    <button class="drill-close" onclick="fecharConfig()" aria-label="Fechar">×</button>
+  </div>
+  <div class="sheet-label">Aparência</div>
+  <div class="seg" role="group" aria-label="Tema">
+    <button type="button" data-tema="auto" aria-pressed="false" onclick="aplicaTema('auto')">Automático</button>
+    <button type="button" data-tema="light" aria-pressed="false" onclick="aplicaTema('light')">Claro</button>
+    <button type="button" data-tema="dark" aria-pressed="false" onclick="aplicaTema('dark')">Escuro</button>
+  </div>
+  <p class="sheet-hint">Automático acompanha o tema do seu aparelho.</p>
+</div>
+
+<nav class="tabbar" aria-label="Navegação principal">
+  <div class="tab active" data-page="calendario" role="button" tabindex="0" onclick="showPage('calendario')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2.5"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Calendário
+  </div>
+  <div class="tab" data-page="receitas" role="button" tabindex="0" onclick="showPage('receitas')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    Receitas
+  </div>
+  <div class="tab" data-page="dividas" role="button" tabindex="0" onclick="showPage('dividas')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+    Dívidas
+  </div>
+  <div class="tab" data-page="gastos" role="button" tabindex="0" onclick="showPage('gastos')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+    Gastos
+  </div>
+  <div class="tab" data-page="dashboard" role="button" tabindex="0" onclick="showPage('dashboard')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+    Dashboard
+  </div>
+  <div class="tab" data-page="metas" role="button" tabindex="0" onclick="showPage('metas')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg>
+    Metas
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="eyebrow">FinançasPro</p>
+    <h1 id="page-title">Calendário do mês</h1>
+    <p class="sub" id="page-sub">Mês a mês, dia a dia.</p>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- DASHBOARD (panorama GLOBAL) -->
+  <div class="page" id="page-dashboard">
+    <div class="section"><div class="wrap">
+      <div class="metrics-grid">
+        <div class="metric-card green clickable" onclick="toggleDashDrill('receitas')">
+          <div class="metric-label">Total de receitas</div>
+          <div class="metric-value" id="dash-receitas">R$ 0</div>
+          <div class="metric-sub" id="dash-receitas-sub">0 lançamentos</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+        <div class="metric-card red clickable" onclick="toggleDashDrill('dividas')">
+          <div class="metric-label">Total a pagar (dívidas)</div>
+          <div class="metric-value" id="dash-dividas">R$ 0</div>
+          <div class="metric-sub" id="dash-dividas-sub">0 parcelas em aberto</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+        <div class="metric-card amber clickable" onclick="toggleDashDrill('gastos')">
+          <div class="metric-label">Total de gastos</div>
+          <div class="metric-value" id="dash-gastos">R$ 0</div>
+          <div class="metric-sub" id="dash-gastos-sub">0 gastos registrados</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+        <div class="metric-card blue clickable" onclick="toggleDashDrill('saldo')">
+          <div class="metric-label">Saldo geral</div>
+          <div class="metric-value" id="dash-saldo">R$ 0</div>
+          <div class="metric-sub" id="dash-saldo-sub">receitas - compromissos</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+      </div>
+
+      <div id="drill-dash-receitas" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Todas as receitas</div><button class="drill-close" onclick="closeDashDrill()" aria-label="Fechar">×</button></div>
+        <div class="table-wrap" id="drill-dash-receitas-content"></div>
+      </div>
+      <div id="drill-dash-dividas" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Parcelas em aberto</div><button class="drill-close" onclick="closeDashDrill()" aria-label="Fechar">×</button></div>
+        <div class="table-wrap" id="drill-dash-dividas-content"></div>
+      </div>
+      <div id="drill-dash-gastos" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Todos os gastos</div><button class="drill-close" onclick="closeDashDrill()" aria-label="Fechar">×</button></div>
+        <div class="table-wrap" id="drill-dash-gastos-content"></div>
+      </div>
+      <div id="drill-dash-saldo" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Composição do saldo geral</div><button class="drill-close" onclick="closeDashDrill()" aria-label="Fechar">×</button></div>
+        <div id="drill-dash-saldo-content"></div>
+      </div>
+
+      <div class="content-grid">
+        <div class="col-main">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Últimos lançamentos</div></div>
+            <div class="table-wrap" id="dash-lancamentos-list"><div class="empty">Nenhum lançamento ainda.</div></div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Dívidas por banco</div></div>
+            <div id="dash-banks-list"><div class="empty">Nenhuma dívida registrada.</div></div>
+          </div>
+        </div>
+        <div class="col-side">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Situação financeira</div></div>
+            <div>
+              <div style="margin-bottom:18px">
+                <div style="display:flex;justify-content:space-between;font-size:14px;gap:8px">
+                  <span style="color:var(--muted)">Comprometimento com dívidas</span>
+                  <span id="comprometimento-pct" style="color:var(--text);white-space:nowrap;font-weight:600">0%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" id="comprometimento-bar" style="width:0%"></div></div>
+              </div>
+              <div style="margin-bottom:18px">
+                <div style="display:flex;justify-content:space-between;font-size:14px;gap:8px">
+                  <span style="color:var(--muted)">Gastos vs receitas totais</span>
+                  <span id="gastos-pct" style="color:var(--text);white-space:nowrap;font-weight:600">0%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" id="gastos-bar" style="width:0%"></div></div>
+              </div>
+              <div id="saude-msg" style="font-size:14px;color:var(--muted);padding:14px 16px;background:var(--inset);border-radius:var(--radius-sm);line-height:1.6">
+                Adicione seus dados financeiros para ver a análise.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Receitas mensais</div></div>
+            <div class="chart-bars" id="chart-bars"></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- RECEITAS -->
+  <div class="page" id="page-receitas">
+    <div class="section"><div class="wrap narrow">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Adicionar receita</div></div>
+        <div class="form-grid">
+          <div class="form-group"><label for="rec-desc">Descrição</label><input type="text" id="rec-desc" placeholder="Ex: Salário, freelance..."></div>
+          <div class="form-group"><label for="rec-valor">Valor (R$)</label><input type="number" id="rec-valor" placeholder="0,00" step="0.01" min="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="rec-cat">Categoria</label>
+            <select id="rec-cat"><option value="salario">Salário</option><option value="freelance">Freelance</option><option value="investimento">Investimento</option><option value="bonus">Bônus</option><option value="outro">Outro</option></select>
+          </div>
+          <div class="form-group"><label for="rec-data">Data</label><input type="date" id="rec-data"></div>
+          <div class="form-group full" style="display:flex;justify-content:flex-end"><button class="btn" onclick="addReceita()">Adicionar receita</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Receitas registradas</div><div id="rec-total-badge" style="font-size:15px;font-weight:600;color:var(--green)"></div></div>
+        <div class="table-wrap" id="receitas-table"><div class="empty">Nenhuma receita registrada.</div></div>
+      </div>
+    </div></div>
+  </div>
+
+
+  <!-- METAS -->
+  <div class="page" id="page-metas">
+    <div class="section"><div class="wrap narrow">
+      <div class="meta-bar"><button class="meta-add" onclick="abrirMetaForm()" aria-label="Adicionar nova meta" title="Nova meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+      <div class="meta-overlay" id="meta-overlay" onclick="if(event.target===this)fecharMetaForm()">
+      <div class="card meta-modal" role="dialog" aria-modal="true" aria-label="Nova meta">
+        <div class="card-header"><div class="card-title">Nova meta</div><button class="meta-close" aria-label="Fechar" onclick="fecharMetaForm()">×</button></div>
+        <div class="form-grid">
+          <div class="form-group full"><label for="meta-obj">Qual é o seu objetivo?</label><input type="text" id="meta-obj" placeholder="Ex: Viagem para o Japão, carro, reserva de emergência..."></div>
+          <div class="form-group"><label for="meta-alvo">Quantia desejada (R$)</label><input type="number" id="meta-alvo" placeholder="0,00" step="0.01" min="0" inputmode="decimal" oninput="atualizaPreviewMeta()"></div>
+          <div class="form-group"><label for="meta-meses">Em quantos meses?</label><input type="number" id="meta-meses" placeholder="Ex: 12" min="1" inputmode="numeric" oninput="atualizaPreviewMeta()"></div>
+          <div class="form-group"><label for="meta-guardado">Já tenho guardado (R$)</label><input type="number" id="meta-guardado" placeholder="0,00 (opcional)" step="0.01" min="0" inputmode="decimal" oninput="atualizaPreviewMeta()"></div>
+          <div class="form-group"><label for="meta-capa">Foto de capa (opcional)</label><input type="file" id="meta-capa" accept="image/*" onchange="metaCapaSel(this)"></div>
+          <div class="form-group full" id="meta-capa-prev" style="display:none;height:140px;border-radius:var(--radius-sm);background-size:cover;background-position:center"></div>
+          <div class="form-group full" id="meta-preview" style="display:none"><div class="parcela-info" id="meta-preview-text"></div></div>
+          <div class="form-group full" style="display:flex;justify-content:flex-end"><button class="btn" onclick="addMeta()">Criar meta</button></div>
+        </div>
+      </div>
+      </div>
+      <div class="meta-grid" id="metas-list"></div>
+    </div></div>
+  </div>
+
+  <!-- DÍVIDAS -->
+  <div class="page" id="page-dividas">
+    <div class="section"><div class="wrap narrow">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Adicionar dívida parcelada</div></div>
+        <div class="form-grid">
+          <div class="form-group"><label for="div-desc">Descrição</label><input type="text" id="div-desc" placeholder="Ex: Cartão de crédito..."></div>
+          <div class="form-group"><label for="div-valor">Valor total da dívida (R$)</label><input type="number" id="div-valor" placeholder="0,00" step="0.01" min="0" inputmode="decimal" oninput="atualizaPreviewDivida()"></div>
+          <div class="form-group"><label for="div-banco">Banco / Financeira</label>
+            <select id="div-banco">
+              <option value="Nubank">Nubank</option><option value="Itaú">Itaú</option><option value="Bradesco">Bradesco</option>
+              <option value="Santander">Santander</option><option value="Banco do Brasil">Banco do Brasil</option>
+              <option value="Caixa">Caixa Econômica</option><option value="C6 Bank">C6 Bank</option>
+              <option value="Inter">Inter</option><option value="XP">XP Investimentos</option>
+              <option value="Sicredi">Sicredi</option><option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="div-parcelas">Nº de parcelas</label><input type="number" id="div-parcelas" placeholder="Ex: 12" min="1" inputmode="numeric" oninput="atualizaPreviewDivida()"></div>
+          <div class="form-group"><label for="div-venc">Vencimento da 1ª parcela</label><input type="date" id="div-venc" oninput="atualizaPreviewDivida()"></div>
+          <div class="form-group"><label for="div-status">Status inicial</label>
+            <select id="div-status"><option value="em-dia">Em dia</option><option value="atrasada">Atrasada</option></select>
+          </div>
+          <div class="form-group full" id="div-preview" style="display:none">
+            <div class="parcela-info" id="div-preview-text"></div>
+          </div>
+          <div class="form-group full" style="display:flex;justify-content:flex-end"><button class="btn" onclick="addDivida()">Adicionar dívida</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Parcelas registradas</div><div id="div-total-badge" style="font-size:15px;font-weight:600;color:var(--red)"></div></div>
+        <div class="table-wrap" id="dividas-table"><div class="empty">Nenhuma dívida registrada.</div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- GASTOS -->
+  <div class="page" id="page-gastos">
+    <div class="section"><div class="wrap narrow">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Adicionar gasto</div></div>
+        <div class="form-grid">
+          <div class="form-group"><label for="gas-desc">Descrição</label><input type="text" id="gas-desc" placeholder="Ex: Supermercado, aluguel..."></div>
+          <div class="form-group"><label for="gas-valor">Valor (R$)</label><input type="number" id="gas-valor" placeholder="0,00" step="0.01" min="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="gas-cat">Categoria</label>
+            <select id="gas-cat"><option value="moradia">Moradia</option><option value="alimentacao">Alimentação</option><option value="transporte">Transporte</option><option value="saude">Saúde</option><option value="lazer">Lazer</option><option value="educacao">Educação</option><option value="vestuario">Vestuário</option><option value="outro">Outro</option></select>
+          </div>
+          <div class="form-group"><label for="gas-data">Data</label><input type="date" id="gas-data"></div>
+          <div class="form-group full" style="display:flex;justify-content:flex-end"><button class="btn" onclick="addGasto()">Adicionar gasto</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Gastos registrados</div><div id="gas-total-badge" style="font-size:15px;font-weight:600;color:var(--amber)"></div></div>
+        <div class="table-wrap" id="gastos-table"><div class="empty">Nenhum gasto registrado.</div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- CALENDÁRIO -->
+  <div class="page active" id="page-calendario">
+    <div class="section"><div class="wrap">
+      <div class="month-nav" id="month-nav">
+        <button class="month-btn" onclick="calMudaMes(-1)" aria-label="Mês anterior">&#8592;</button>
+        <div class="month-selector"><span id="cal-mes-label">Abril 2026</span></div>
+        <button class="month-btn" onclick="calMudaMes(1)" aria-label="Próximo mês">&#8594;</button>
+      </div>
+
+      <div class="metrics-grid-3">
+        <div class="metric-card green clickable" onclick="toggleCalDrill('receitas')">
+          <div class="metric-label">Receitas do mês</div>
+          <div class="metric-value" id="cal-total-receitas">R$ 0</div>
+          <div class="metric-sub" id="cal-sub-receitas">0 lançamentos</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+        <div class="metric-card red clickable" onclick="toggleCalDrill('pagar')">
+          <div class="metric-label">Total a pagar no mês</div>
+          <div class="metric-value" id="cal-total-pagar">R$ 0</div>
+          <div class="metric-sub" id="cal-sub-pagar">parcelas + gastos</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+        <div class="metric-card blue clickable" onclick="toggleCalDrill('saldo')">
+          <div class="metric-label">Saldo do mês</div>
+          <div class="metric-value" id="cal-saldo">R$ 0</div>
+          <div class="metric-sub" id="cal-sub-saldo">receitas - pagamentos</div>
+          <div class="metric-hint">Detalhar ›</div>
+        </div>
+      </div>
+
+      <div id="drill-cal-receitas" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Receitas do mês</div><button class="drill-close" onclick="closeCalDrill()" aria-label="Fechar">×</button></div>
+        <div class="table-wrap" id="drill-cal-receitas-content"></div>
+      </div>
+      <div id="drill-cal-pagar" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Total a pagar — parcelas + gastos do mês</div><button class="drill-close" onclick="closeCalDrill()" aria-label="Fechar">×</button></div>
+        <div class="table-wrap" id="drill-cal-pagar-content"></div>
+      </div>
+      <div id="drill-cal-saldo" class="drill-panel">
+        <div class="drill-header"><div class="drill-title">Composição do saldo do mês</div><button class="drill-close" onclick="closeCalDrill()" aria-label="Fechar">×</button></div>
+        <div id="drill-cal-saldo-content"></div>
+      </div>
+
+      <div class="cal-layout">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" id="cal-titulo">Calendário</div>
+              <div style="display:flex;gap:6px">
+                <button class="btn-ghost" onclick="calMudaMes(-1)" aria-label="Mês anterior">&#8592;</button>
+                <button class="btn-ghost" onclick="calMudaMes(1)" aria-label="Próximo mês">&#8594;</button>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px">
+              <div class="cal-dow">Dom</div><div class="cal-dow">Seg</div><div class="cal-dow">Ter</div>
+              <div class="cal-dow">Qua</div><div class="cal-dow">Qui</div><div class="cal-dow">Sex</div><div class="cal-dow">Sáb</div>
+            </div>
+            <div id="cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px"></div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header" style="margin-bottom:10px"><div class="card-title" id="cal-dia-titulo">Selecione um dia</div></div>
+            <div id="cal-dia-detalhe"><div class="empty" style="padding:14px 0">Clique em um dia.</div></div>
+          </div>
+          <div class="card">
+            <div class="card-header" style="margin-bottom:10px"><div class="card-title">Próximos vencimentos</div></div>
+            <div id="cal-proximos"><div class="empty" style="padding:10px 0">Nenhum.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><div class="card-title">Todos os lançamentos do mês</div></div>
+        <div class="table-wrap" id="cal-lista-mes"><div class="empty">Nenhum lançamento.</div></div>
+      </div>
+    </div></div>
+  </div>
+</main>
+
+<footer class="footer"><span class="footer-logo" role="img" aria-label="FinançasPro"></span>Seus dados ficam salvos somente neste navegador.</footer>
+
+<div class="notification" id="notif" role="status" aria-live="polite">
+  <div class="notif-dot"></div>
+  <span id="notif-msg">Adicionado com sucesso!</span>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
